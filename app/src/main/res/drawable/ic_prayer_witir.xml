@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Crescent moon for Witir night prayer -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M11.1,3.08A9,9 0 0,0 20.92,12.9 9,9 0 1,1 11.1,3.08Z" />
+    <!-- 3 odd radiant night stars representing odd raka'at witir -->
+    <!-- Star 1 -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M18.5,3.5l0.4,0.9 0.9,0.4 -0.9,0.4 -0.4,0.9 -0.4,-0.9 -0.9,-0.4 0.9,-0.4z" />
+    <!-- Star 2 -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M14.5,7l0.3,0.7 0.7,0.3 -0.7,0.3 -0.3,0.7 -0.3,-0.7 -0.7,-0.3 0.7,-0.3z" />
+    <!-- Star 3 -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M19,9.5l0.3,0.7 0.7,0.3 -0.7,0.3 -0.3,0.7 -0.3,-0.7 -0.7,-0.3 0.7,-0.3z" />
+</vector>
