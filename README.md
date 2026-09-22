@@ -1,4 +1,4 @@
-# Shalah — Offline Islamic Prayer Tracker & Quran Companion
+# Shalah: Offline Islamic Prayer Tracker & Quran Companion
 
 <div align="center">
 
@@ -10,7 +10,7 @@
 
 <br/>
 
-**A modern, private, and beautifully crafted native Android application for tracking daily prayers, Sunnah worship, Quran Khatam progress, and finding the Qibla — built with zero internet permissions, reactive Jetpack Compose, and instant Home Screen Widgets.**
+**A modern, private, and beautifully crafted native Android application for tracking daily prayers, Sunnah worship, Quran Khatam progress, and finding the Qibla. Built with zero internet permissions, reactive Jetpack Compose, and instant Home Screen Widgets.**
 
 [Features](#-key-features) • [Architecture](#-architecture--tech-stack) • [Directory Structure](#-project-structure) • [Algorithms](#-astronomical--navigation-algorithms) • [Building & Running](#-how-to-build-and-run) • [Widget Guide](#-home-screen-widgets) • [Backup Schema](#-data-backup--portability)
 
