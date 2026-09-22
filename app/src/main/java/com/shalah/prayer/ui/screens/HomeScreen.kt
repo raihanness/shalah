@@ -1185,8 +1185,10 @@ fun KiblatTabContent(
             ?: sensorManager?.getDefaultSensor(Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR)
             ?: sensorManager?.getDefaultSensor(Sensor.TYPE_ORIENTATION)
 
-        val accelSensor = if (rotationSensor == null) sensorManager?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) else null
-        val magnetSensor = if (rotationSensor == null) sensorManager?.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) else null
+        val accelSensor =
+            if (rotationSensor == null) sensorManager?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER) else null
+        val magnetSensor =
+            if (rotationSensor == null) sensorManager?.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) else null
 
         if (rotationSensor == null && (accelSensor == null || magnetSensor == null)) {
             isSensorAvailable = false
@@ -2942,7 +2944,13 @@ fun LegendItem(
                 .size(10.dp)
                 .clip(RoundedCornerShape(3.dp))
                 .background(color)
-                .then(if (border) Modifier.border(1.dp, GrayTextMuted.copy(alpha = 0.4f), RoundedCornerShape(3.dp)) else Modifier)
+                .then(
+                    if (border) Modifier.border(
+                        1.dp,
+                        GrayTextMuted.copy(alpha = 0.4f),
+                        RoundedCornerShape(3.dp)
+                    ) else Modifier
+                )
         )
         Spacer(modifier = Modifier.width(6.dp))
         Text(
@@ -3143,7 +3151,13 @@ fun CitySelectionSheet(
                                     color = if (isSelected) OnPureBlack else PureBlack
                                 )
                                 Text(
-                                    text = "$tz • Lat: ${String.format(Locale.US, "%.2f", city.latitude)}, Long: ${String.format(Locale.US, "%.2f", city.longitude)}",
+                                    text = "$tz • Lat: ${
+                                        String.format(
+                                            Locale.US,
+                                            "%.2f",
+                                            city.latitude
+                                        )
+                                    }, Long: ${String.format(Locale.US, "%.2f", city.longitude)}",
                                     fontSize = 11.sp,
                                     fontFamily = PlusJakartaSansFamily,
                                     color = if (isSelected) OnPureBlack.copy(alpha = 0.7f) else GrayTextSecondary
@@ -3656,7 +3670,12 @@ fun EditPrayerTimeDialog(
                                     color = GrayTextSecondary
                                 )
                                 Text(
-                                    text = String.format(Locale.US, "%02d:%02d", target.scheduledTime.hour, target.scheduledTime.minute),
+                                    text = String.format(
+                                        Locale.US,
+                                        "%02d:%02d",
+                                        target.scheduledTime.hour,
+                                        target.scheduledTime.minute
+                                    ),
                                     fontSize = 12.sp,
                                     fontFamily = PlusJakartaSansFamily,
                                     fontWeight = FontWeight.Bold,
