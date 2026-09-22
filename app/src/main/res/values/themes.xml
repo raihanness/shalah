@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Shalah" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/canvas_bg</item>
+        <item name="android:navigationBarColor">@color/canvas_bg</item>
+        <item name="android:windowBackground">@color/canvas_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

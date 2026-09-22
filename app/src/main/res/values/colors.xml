@@ -1,0 +1,24 @@
+<resources>
+    <color name="pure_black">#143E33</color>
+    <color name="charcoal_black">#191C1A</color>
+    <color name="canvas_bg">#F7F6F2</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="divider_border">#E8E5DC</color>
+    
+    <color name="text_primary">#191C1A</color>
+    <color name="text_secondary">#5A6660</color>
+    <color name="text_muted">#8A9791</color>
+
+    <!-- Widget Specific -->
+    <color name="widget_background">#FFFFFF</color>
+    <color name="widget_item_bg">#EFECE5</color>
+    <color name="widget_item_done_bg">#143E33</color>
+    <color name="widget_item_done_border">#143E33</color>
+    <color name="widget_text_done">#FFFFFF</color>
+    <color name="widget_text_pending">#191C1A</color>
+    <color name="widget_subtext">#5A6660</color>
+    <color name="widget_checkbox_done">#FFFFFF</color>
+    <color name="widget_checkbox_pending">#8A9791</color>
+    <color name="widget_time_done">#D1E7DF</color>
+    <color name="widget_time_pending">#5A6660</color>
+</resources>

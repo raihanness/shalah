@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_card_background"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Header (Click to open app) -->
+    <LinearLayout
+        android:id="@+id/widget_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_widget_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="shalah."
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_widget_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hari ini"
+                android:textColor="@color/text_secondary"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_widget_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/widget_prayer_btn_done"
+            android:paddingStart="10dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="3dp"
+            android:text="0 / 5"
+            android:textColor="@color/widget_text_done"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_widget_prayer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:max="5"
+        android:progress="0"
+        android:progressTint="@color/charcoal_black" />
+
+    <!-- 5 Prayers Grid Row with Vector Icons & Schedule/Checked Hours -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- SUBUH / FAJR -->
+        <LinearLayout
+            android:id="@+id/btn_prayer_fajr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_prayer_btn_pending"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iv_fajr_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/fajr"
+                android:src="@drawable/ic_prayer_fajr" />
+
+            <TextView
+                android:id="@+id/tv_fajr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Subuh"
+                android:textColor="@color/widget_text_pending"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_fajr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="04.31"
+                android:textColor="@color/widget_time_pending"
+                android:textSize="9.5sp" />
+
+            <ImageView
+                android:id="@+id/iv_fajr_check"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Status"
+                android:src="@drawable/ic_circle_pending" />
+        </LinearLayout>
+
+        <!-- DZUHUR / DHUHR -->
+        <LinearLayout
+            android:id="@+id/btn_prayer_dhuhr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_prayer_btn_pending"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iv_dhuhr_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/dhuhr"
+                android:src="@drawable/ic_prayer_dhuhr" />
+
+            <TextView
+                android:id="@+id/tv_dhuhr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Dzuhur"
+                android:textColor="@color/widget_text_pending"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_dhuhr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="11.50"
+                android:textColor="@color/widget_time_pending"
+                android:textSize="9.5sp" />
+
+            <ImageView
+                android:id="@+id/iv_dhuhr_check"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Status"
+                android:src="@drawable/ic_circle_pending" />
+        </LinearLayout>
+
+        <!-- ASHAR / ASR -->
+        <LinearLayout
+            android:id="@+id/btn_prayer_asr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_prayer_btn_pending"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iv_asr_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/asr"
+                android:src="@drawable/ic_prayer_asr" />
+
+            <TextView
+                android:id="@+id/tv_asr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Ashar"
+                android:textColor="@color/widget_text_pending"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_asr_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="15.05"
+                android:textColor="@color/widget_time_pending"
+                android:textSize="9.5sp" />
+
+            <ImageView
+                android:id="@+id/iv_asr_check"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Status"
+                android:src="@drawable/ic_circle_pending" />
+        </LinearLayout>
+
+        <!-- MAGHRIB -->
+        <LinearLayout
+            android:id="@+id/btn_prayer_maghrib"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/widget_prayer_btn_pending"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iv_maghrib_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/maghrib"
+                android:src="@drawable/ic_prayer_maghrib" />
+
+            <TextView
+                android:id="@+id/tv_maghrib_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Maghrib"
+                android:textColor="@color/widget_text_pending"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_maghrib_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="17.52"
+                android:textColor="@color/widget_time_pending"
+                android:textSize="9.5sp" />
+
+            <ImageView
+                android:id="@+id/iv_maghrib_check"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Status"
+                android:src="@drawable/ic_circle_pending" />
+        </LinearLayout>
+
+        <!-- ISYA / ISHA -->
+        <LinearLayout
+            android:id="@+id/btn_prayer_isha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/widget_prayer_btn_pending"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <ImageView
+                android:id="@+id/iv_isha_icon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:contentDescription="@string/isha"
+                android:src="@drawable/ic_prayer_isha" />
+
+            <TextView
+                android:id="@+id/tv_isha_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Isya"
+                android:textColor="@color/widget_text_pending"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_isha_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="19.01"
+                android:textColor="@color/widget_time_pending"
+                android:textSize="9.5sp" />
+
+            <ImageView
+                android:id="@+id/iv_isha_check"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Status"
+                android:src="@drawable/ic_circle_pending" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

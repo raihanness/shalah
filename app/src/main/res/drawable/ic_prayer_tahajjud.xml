@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Deep night crescent moon for Tahajjud -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M12.3,2.05A9,9 0 0,0 21.95,11.7 9,9 0 1,1 12.3,2.05Z" />
+    <!-- Bright night star 1 -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M19,3.5l0.5,1.2 1.2,0.5 -1.2,0.5 -0.5,1.2 -0.5,-1.2 -1.2,-0.5 1.2,-0.5z" />
+    <!-- Distant night star 2 -->
+    <path
+        android:fillColor="#111111"
+        android:pathData="M14,6l0.3,0.8 0.8,0.3 -0.8,0.3 -0.3,0.8 -0.3,-0.8 -0.8,-0.3 0.8,-0.3z" />
+</vector>

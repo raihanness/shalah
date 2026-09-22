@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Shalah</string>
+    <string name="app_subtitle">Offline Islamic Prayer Tracker</string>
+    <string name="widget_name">Prayer Tracker (Card 4x2)</string>
+    <string name="widget_description">Interactive 5 daily prayers tracker on your home screen</string>
+    <string name="compact_widget_name">Prayer Bar (Compact 4x1)</string>
+    <string name="compact_widget_description">Bilah minimalis 4x1 melacak 5 shalat fardhu harian</string>
+    <string name="fajr">Fajr</string>
+    <string name="dhuhr">Dhuhr</string>
+    <string name="asr">Asr</string>
+    <string name="maghrib">Maghrib</string>
+    <string name="isha">Isha</string>
+</resources>
